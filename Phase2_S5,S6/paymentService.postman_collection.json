@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "7d04fd04-8505-44c9-af7c-1feedbeda81f",
+		"name": "paymentService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25094521"
+	},
+	"item": [
+		{
+			"name": "admin_signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adminName\": \"haneen\",\r\n    \"adminEmail\": \"walaa@gmailcom\",\r\n    \"adminPassword\": \"3456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/admin/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"admin",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_signIn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/admin/signIn/walaa@gmailcom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"admin",
+						"signIn",
+						"walaa@gmailcom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDiscount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameservice\" : \"Landline‏QuarterReceipt‏\",\r\n    \"specificdiscount\" : 0.5,\r\n    \"overalldiscount\" : 0.25\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/addDiscount/Landline‏QuarterReceipt‏",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"addDiscount",
+						"Landline‏QuarterReceipt‏"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDiscount(SpecificOnly)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameservice\" : \"InternetPaymentEtisalat‏\",\r\n    \"specificdiscount\" : 0.5,\r\n    \"overalldiscount\" : 0.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/addDiscount/InternetPaymentEtisalat‏",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"addDiscount",
+						"InternetPaymentEtisalat‏"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"haneen\",\r\n    \"userEmail\": \"email\",\r\n    \"userPassword\": \"3456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/user/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"user",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_signIn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/user/signIn/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"user",
+						"signIn",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchForService",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/provider/search/InternetPaymentEtisalat‏",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"provider",
+						"search",
+						"InternetPaymentEtisalat‏"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkDiscount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/addDiscount/checkDiscount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"addDiscount",
+						"checkDiscount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddToWallet_And_payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 197.0,\r\n    \"mobileNumber\": \"01234\",\r\n    \"walletMoney\":200.5,\r\n    \"userEmail\" : \"farah\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/pay/Landline‏QuarterReceipt‏/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"pay",
+						"Landline‏QuarterReceipt‏",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payment_with_creditCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 197.0,\r\n    \"mobileNumber\": \"1234\",\r\n    \"balance\":200.0,\r\n    \"userEmail\" : \"farah\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/pay/InternetPaymentEtisalat‏/creditcard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"pay",
+						"InternetPaymentEtisalat‏",
+						"creditcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payment_with_cash",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100.0,\r\n    \"mobileNumber\": \"2345\",\r\n    \"userEmail\" : \"rawda\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/pay/Landline‏QuarterReceipt‏/cash",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"pay",
+						"Landline‏QuarterReceipt‏",
+						"cash"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "askForRefund1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serviceName\" : \"Landline‏QuarterReceipt‏\",\r\n    \"userEmail\" : \"rawda\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/refund/askForRfund",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"refund",
+						"askForRfund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "askForRefund2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serviceName\" : \"InternetPaymentEtisalat‏\",\r\n    \"userEmail\" : \"farah\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/refund/askForRfund",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"refund",
+						"askForRfund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showAllRefundRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/refund/allrefundRequests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"refund",
+						"allrefundRequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setRefundState",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serviceName\" : \"Landline‏QuarterReceipt‏\",\r\n    \"refundState\" : \"reject\",\r\n    \"userEmail\" : \"farah\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9998/refund/admin/refundStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"refund",
+						"admin",
+						"refundStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/pay/getPaymentTransaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"pay",
+						"getPaymentTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "walletTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/pay/getWalletTransaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"pay",
+						"getWalletTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refundTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9998/refund/allrefundRequests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9998",
+					"path": [
+						"refund",
+						"allrefundRequests"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
